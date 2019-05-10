@@ -70,22 +70,22 @@ set_target_properties( cppgenerate_static PROPERTIES OUTPUT_NAME cppgenerate )
 #
 # Install information
 #
-set( install_targets ${install_targets} cppgenerate cppgenerate_static )
-IF( UNIX )
-    include( GNUInstallDirs )
-    install( TARGETS ${install_targets}
-             RUNTIME DESTINATION bin
-             LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
-             ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" )
-    install( FILES ${CPPGENERATE_HEADERS} DESTINATION include/cppgenerate )
-ENDIF( UNIX )
-IF( WIN32 )
-    install( TARGETS ${install_targets}
-             RUNTIME DESTINATION bin
-             LIBRARY DESTINATION lib
-             ARCHIVE DESTINATION lib )
-    install( FILES ${CPPGENERATE_HEADERS} DESTINATION include/cppgenerate )
-ENDIF( WIN32 )
+# set( install_targets ${install_targets} cppgenerate cppgenerate_static )
+# IF( UNIX )
+#     include( GNUInstallDirs )
+#     install( TARGETS ${install_targets}
+#              RUNTIME DESTINATION bin
+#              LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+#              ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" )
+#     install( FILES ${CPPGENERATE_HEADERS} DESTINATION include/cppgenerate )
+# ENDIF( UNIX )
+# IF( WIN32 )
+#     install( TARGETS ${install_targets}
+#              RUNTIME DESTINATION bin
+#              LIBRARY DESTINATION lib
+#              ARCHIVE DESTINATION lib )
+#     install( FILES ${CPPGENERATE_HEADERS} DESTINATION include/cppgenerate )
+# ENDIF( WIN32 )
 
 IF( UNIX )
     #
