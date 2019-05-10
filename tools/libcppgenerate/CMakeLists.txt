@@ -115,10 +115,10 @@ IF( UNIX )
         "${CMAKE_CURRENT_SOURCE_DIR}/cppgenerate-static.pc.cmake"
         "${CMAKE_CURRENT_BINARY_DIR}/cppgenerate-static.pc"
     )
-    INSTALL( FILES 
-             "${CMAKE_BINARY_DIR}/cppgenerate.pc"
-             "${CMAKE_BINARY_DIR}/cppgenerate-static.pc"
-             DESTINATION lib/pkgconfig)
+    # INSTALL( FILES 
+    #          "${CMAKE_BINARY_DIR}/cppgenerate.pc"
+    #          "${CMAKE_BINARY_DIR}/cppgenerate-static.pc"
+    #          DESTINATION lib/pkgconfig)
 ENDIF( UNIX )
 
 #
